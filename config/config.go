@@ -31,3 +31,7 @@ func ConnectDB() *mongo.Client {
 	return client
 
 }
+
+func GetCollection(client *mongo.Client, dbName string, collectionName string) *mongo.Collection {
+	return client.Database(dbName).Collection(collectionName)
+}
