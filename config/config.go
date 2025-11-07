@@ -24,7 +24,7 @@ func ConnectDB() *mongo.Client {
 	//connect to mongoDB
 	client, err := mongo.Connect(ctx, clientOptions)
 	if err != nil {
-		log.Fatal("mongo connection failed : %v ", err)
+		log.Printf("mongo connection failed : %v ", err)
 	}
 
 	log.Println("Connected Successfully")
